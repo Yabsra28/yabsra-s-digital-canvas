@@ -28,12 +28,27 @@ const Hero = () => {
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-accent p-1 animate-pulse-glow">
                 <div className="w-full h-full rounded-full bg-background" />
               </div>
-              {/* Image */}
-              <img
-                src={profileImage}
-                alt="Yabsra Fekadu"
-                className="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] object-cover rounded-full"
-              />
+              {/* Image container with radial gradient mask */}
+              <div 
+                className="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] rounded-full overflow-hidden"
+                style={{
+                  background: 'hsl(var(--background))',
+                }}
+              >
+                <div
+                  className="w-full h-full relative"
+                  style={{
+                    maskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
+                    WebkitMaskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
+                  }}
+                >
+                  <img
+                    src={profileImage}
+                    alt="Yabsra Fekadu"
+                    className="w-full h-full object-cover grayscale brightness-110"
+                  />
+                </div>
+              </div>
             </div>
             {/* Floating Badge */}
             <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-4 py-2 bg-card/90 backdrop-blur-sm border border-border/50 rounded-full">

@@ -1,5 +1,5 @@
 import { Linkedin, Mail, MapPin } from "lucide-react";
-import profileImage from "@/assets/yabsra-profile.png";
+import profileImage from "@/assets/yabsra-profile.jpg";
 
 const Hero = () => {
   return (
@@ -23,18 +23,18 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
           {/* Profile Image */}
           <div className="relative animate-slide-up">
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
+            <div className="relative w-72 h-72 md:w-96 md:h-96">
               <div
                 className="w-full h-full"
                 style={{
-                  maskImage: "radial-gradient(circle, black 55%, transparent 78%)",
-                  WebkitMaskImage: "radial-gradient(circle, black 55%, transparent 78%)",
+                  maskImage: "radial-gradient(circle, white 62%, transparent 82%)",
+                  WebkitMaskImage: "radial-gradient(circle, white 62%, transparent 82%)",
                 }}
               >
                 <img
                   src={profileImage}
                   alt="Yabsra Fekadu portrait"
-                  className="w-full h-full object-cover grayscale"
+                  className="w-full h-full object-cover scale-105"
                 />
               </div>
             </div>

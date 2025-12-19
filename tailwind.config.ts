@@ -80,6 +80,8 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         shimmer: "shimmer 2s linear infinite",
         "border-beam": "border-beam 4s linear infinite",
+        "slide-right": "slide-right 25s linear infinite",
+        "slide-right-slow": "slide-right 35s linear infinite",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

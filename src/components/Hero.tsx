@@ -24,11 +24,19 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="relative animate-slide-up">
             <div className="relative w-72 h-72 md:w-96 md:h-96">
-              <img
-                src={profileImage}
-                alt="Yabsra Fekadu portrait"
-                className="w-full h-full object-cover"
-              />
+              <div
+                className="w-full h-full"
+                style={{
+                  maskImage: "radial-gradient(circle, white 62%, transparent 82%)",
+                  WebkitMaskImage: "radial-gradient(circle, white 62%, transparent 82%)",
+                }}
+              >
+                <img
+                  src={profileImage}
+                  alt="Yabsra Fekadu portrait"
+                  className="w-full h-full object-cover scale-105"
+                />
+              </div>
             </div>
             {/* Floating Badge */}
             <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-4 py-2 bg-card/90 backdrop-blur-sm border border-border/50 rounded-full">

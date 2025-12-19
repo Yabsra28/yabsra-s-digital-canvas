@@ -24,18 +24,17 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="relative animate-slide-up">
             <div className="relative w-64 h-64 md:w-80 md:h-80">
-              {/* Image with seamless blend - no frame */}
               <div
                 className="w-full h-full"
                 style={{
-                  maskImage: 'radial-gradient(circle, black 40%, transparent 70%)',
-                  WebkitMaskImage: 'radial-gradient(circle, black 40%, transparent 70%)',
+                  maskImage: "radial-gradient(circle, black 55%, transparent 78%)",
+                  WebkitMaskImage: "radial-gradient(circle, black 55%, transparent 78%)",
                 }}
               >
                 <img
                   src={profileImage}
-                  alt="Yabsra Fekadu"
-                  className="w-full h-full object-cover grayscale brightness-110 scale-110"
+                  alt="Yabsra Fekadu portrait"
+                  className="w-full h-full object-cover grayscale"
                 />
               </div>
             </div>

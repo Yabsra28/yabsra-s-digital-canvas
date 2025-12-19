@@ -180,6 +180,11 @@
   to { opacity: 1; }
 }
 
+@keyframes slide-right {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;

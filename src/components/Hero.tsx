@@ -24,30 +24,19 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="relative animate-slide-up">
             <div className="relative w-64 h-64 md:w-80 md:h-80">
-              {/* Glow Ring */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary to-accent p-1 animate-pulse-glow">
-                <div className="w-full h-full rounded-full bg-background" />
-              </div>
-              {/* Image container with radial gradient mask */}
-              <div 
-                className="absolute inset-2 w-[calc(100%-16px)] h-[calc(100%-16px)] rounded-full overflow-hidden"
+              {/* Image with seamless blend - no frame */}
+              <div
+                className="w-full h-full"
                 style={{
-                  background: 'hsl(var(--background))',
+                  maskImage: 'radial-gradient(circle, black 40%, transparent 70%)',
+                  WebkitMaskImage: 'radial-gradient(circle, black 40%, transparent 70%)',
                 }}
               >
-                <div
-                  className="w-full h-full relative"
-                  style={{
-                    maskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
-                    WebkitMaskImage: 'radial-gradient(circle, black 60%, transparent 100%)',
-                  }}
-                >
-                  <img
-                    src={profileImage}
-                    alt="Yabsra Fekadu"
-                    className="w-full h-full object-cover grayscale brightness-110"
-                  />
-                </div>
+                <img
+                  src={profileImage}
+                  alt="Yabsra Fekadu"
+                  className="w-full h-full object-cover grayscale brightness-110 scale-110"
+                />
               </div>
             </div>
             {/* Floating Badge */}

@@ -24,13 +24,6 @@ const Hero = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-end">
           
-          {/* Location Badge - positioned on the left */}
-          <div className="absolute bottom-32 left-6 lg:left-1/4 px-4 py-2 bg-card/80 backdrop-blur-sm border border-border/50 rounded-full animate-slide-up hidden lg:flex">
-            <div className="flex items-center gap-2 text-sm">
-              <MapPin size={14} className="text-primary" />
-              <span className="text-muted-foreground">Addis Ababa, Ethiopia</span>
-            </div>
-          </div>
 
           {/* Right Side - Text Content */}
           <div className="text-center lg:text-left max-w-xl lg:w-1/2 lg:pl-12">
@@ -57,8 +50,8 @@ const Hero = () => {
               </p>
             </div>
 
-            {/* Location Badge - mobile */}
-            <div className="mt-4 flex lg:hidden justify-center">
+            {/* Location Badge */}
+            <div className="mt-6 flex justify-center lg:justify-start animate-slide-up delay-400">
               <div className="px-4 py-2 bg-card/80 backdrop-blur-sm border border-border/50 rounded-full">
                 <div className="flex items-center gap-2 text-sm">
                   <MapPin size={14} className="text-primary" />

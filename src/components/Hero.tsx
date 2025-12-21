@@ -3,38 +3,46 @@ import heroBg from "@/assets/yabsra-hero-bg.png";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image - Full Page */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-        }}
-      />
-      
-      {/* Gradient Overlay to blend edges */}
-      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/80" />
-      <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-background/60" />
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-hero-gradient" />
       
       {/* Subtle glow effects */}
       <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
-          {/* Spacer for the background image positioning */}
-          <div className="w-72 h-72 md:w-96 md:h-96 lg:block hidden" />
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
           
-          {/* Location Badge */}
-          <div className="absolute bottom-32 left-1/2 lg:left-1/4 -translate-x-1/2 px-4 py-2 bg-card/80 backdrop-blur-sm border border-border/50 rounded-full animate-slide-up">
-            <div className="flex items-center gap-2 text-sm">
-              <MapPin size={14} className="text-primary" />
-              <span className="text-muted-foreground">Addis Ababa, Ethiopia</span>
+          {/* Left Side - Photo */}
+          <div className="relative w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <div className="relative">
+              <div
+                className="w-72 h-72 md:w-96 md:h-96 lg:w-[500px] lg:h-[500px]"
+                style={{
+                  maskImage: "radial-gradient(circle, white 55%, transparent 75%)",
+                  WebkitMaskImage: "radial-gradient(circle, white 55%, transparent 75%)",
+                }}
+              >
+                <img
+                  src={heroBg}
+                  alt="Yabsra Fekadu portrait"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              
+              {/* Location Badge */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-card/80 backdrop-blur-sm border border-border/50 rounded-full animate-slide-up">
+                <div className="flex items-center gap-2 text-sm">
+                  <MapPin size={14} className="text-primary" />
+                  <span className="text-muted-foreground">Addis Ababa, Ethiopia</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Text Content */}
-          <div className="text-center lg:text-left max-w-xl">
+          {/* Right Side - Text Content */}
+          <div className="text-center lg:text-left max-w-xl lg:w-1/2">
             <div className="animate-slide-up delay-100">
               <p className="text-primary font-mono text-sm mb-4">Hello, I'm</p>
             </div>

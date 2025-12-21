@@ -2,7 +2,7 @@ import {
   Code, Database, Brain, Cloud, Terminal, 
   FileJson, Server, Workflow, BarChart3, Cpu,
   GitBranch, Container, Sparkles, MessageSquare,
-  Braces, Globe, Layers, Zap
+  Braces, Layers, Zap
 } from "lucide-react";
 
 const allSkills = [
@@ -21,7 +21,6 @@ const allSkills = [
   { icon: Container, name: "Docker" },
   { icon: GitBranch, name: "Git" },
   { icon: Braces, name: "React.js" },
-  { icon: Globe, name: "APIs" },
   { icon: Layers, name: "ETL" },
   { icon: Zap, name: "TensorFlow" },
 ];

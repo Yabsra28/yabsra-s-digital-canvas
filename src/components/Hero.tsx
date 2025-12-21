@@ -1,49 +1,35 @@
 import { Linkedin, Mail, MapPin } from "lucide-react";
-import profileImage from "@/assets/yabsra-profile.jpg";
+import heroBg from "@/assets/yabsra-hero-bg.png";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-hero-gradient" />
-      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/20 rounded-full blur-3xl" />
-      
-      {/* Grid Pattern */}
+      {/* Background Image - Full Page */}
       <div 
-        className="absolute inset-0 opacity-5"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `linear-gradient(hsl(var(--primary) / 0.3) 1px, transparent 1px),
-                           linear-gradient(90deg, hsl(var(--primary) / 0.3) 1px, transparent 1px)`,
-          backgroundSize: '50px 50px'
+          backgroundImage: `url(${heroBg})`,
         }}
       />
+      
+      {/* Gradient Overlay to blend edges */}
+      <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/80" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/60 via-transparent to-background/60" />
+      
+      {/* Subtle glow effects */}
+      <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-20">
-          {/* Profile Image */}
-          <div className="relative animate-slide-up">
-            <div className="relative w-72 h-72 md:w-96 md:h-96">
-              <div
-                className="w-full h-full"
-                style={{
-                  maskImage: "radial-gradient(circle, white 62%, transparent 82%)",
-                  WebkitMaskImage: "radial-gradient(circle, white 62%, transparent 82%)",
-                }}
-              >
-                <img
-                  src={profileImage}
-                  alt="Yabsra Fekadu portrait"
-                  className="w-full h-full object-cover scale-105"
-                />
-              </div>
-            </div>
-            {/* Floating Badge */}
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-4 py-2 bg-card/90 backdrop-blur-sm border border-border/50 rounded-full">
-              <div className="flex items-center gap-2 text-sm">
-                <MapPin size={14} className="text-primary" />
-                <span className="text-muted-foreground">Addis Ababa, Ethiopia</span>
-              </div>
+          {/* Spacer for the background image positioning */}
+          <div className="w-72 h-72 md:w-96 md:h-96 lg:block hidden" />
+          
+          {/* Location Badge */}
+          <div className="absolute bottom-32 left-1/2 lg:left-1/4 -translate-x-1/2 px-4 py-2 bg-card/80 backdrop-blur-sm border border-border/50 rounded-full animate-slide-up">
+            <div className="flex items-center gap-2 text-sm">
+              <MapPin size={14} className="text-primary" />
+              <span className="text-muted-foreground">Addis Ababa, Ethiopia</span>
             </div>
           </div>
 

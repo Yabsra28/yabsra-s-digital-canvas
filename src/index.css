@@ -1,46 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
-
 @layer base {
   :root {
-    --background: 222 47% 4%;
-    --foreground: 210 40% 98%;
+    --background: 210 40% 98%;
+    --foreground: 222 47% 10%;
 
-    --card: 222 47% 7%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 10%;
 
-    --popover: 222 47% 7%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 10%;
 
-    --primary: 187 94% 48%;
-    --primary-foreground: 222 47% 4%;
+    --primary: 196 95% 36%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 222 47% 12%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 214 32% 93%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 222 47% 15%;
-    --muted-foreground: 215 20% 55%;
+    --muted: 214 32% 93%;
+    --muted-foreground: 215 16% 44%;
 
-    --accent: 280 100% 70%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 275 85% 52%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 222 47% 15%;
-    --input: 222 47% 15%;
-    --ring: 187 94% 48%;
+    --border: 214 32% 86%;
+    --input: 214 32% 86%;
+    --ring: 196 95% 36%;
 
     --radius: 0.75rem;
 
     /* Custom portfolio colors */
-    --glow: 187 94% 48%;
-    --glow-secondary: 280 100% 70%;
-    --gradient-start: 187 94% 48%;
-    --gradient-end: 280 100% 70%;
+    --glow: 196 95% 36%;
+    --glow-secondary: 275 85% 52%;
+    --gradient-start: 196 95% 36%;
+    --gradient-end: 275 85% 52%;
   }
 
   .dark {
@@ -71,6 +71,11 @@
     --border: 222 47% 15%;
     --input: 222 47% 15%;
     --ring: 187 94% 48%;
+
+    --glow: 187 94% 48%;
+    --glow-secondary: 280 100% 70%;
+    --gradient-start: 187 94% 48%;
+    --gradient-end: 280 100% 70%;
   }
 }
 

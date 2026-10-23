@@ -1,8 +1,8 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "yabsra-digital-canvas",
   "private": true,
-  "version": "0.0.0",
-  "hompage": "https://yabsra28.github.io/yabsra-s-digital-canvas",
+  "version": "1.0.0",
+  "homepage": "https://yabsra28.github.io/yabsra-s-digital-canvas",
   "type": "module",
   "scripts": {
   "dev": "vite",

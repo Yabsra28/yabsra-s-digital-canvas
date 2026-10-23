@@ -74,6 +74,14 @@ export default {
         "border-beam": {
           "100%": { "offset-distance": "100%" },
         },
+        "slide-right": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        float: {
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
